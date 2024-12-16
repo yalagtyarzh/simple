@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 )
 
@@ -28,5 +29,6 @@ func main() {
 		w.Write([]byte("Forbidden"))
 	})
 
-	http.ListenAndServe(":8080", nil)
+	fmt.Println("Server started at port 80")
+	http.ListenAndServe(":80", nil)
 }
